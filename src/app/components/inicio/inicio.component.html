@@ -6,31 +6,52 @@
       <div class="user">
         <i class="fa-solid fa-user" style="color: #54728a;"></i>
       </div>
-      <form [formGroup]="form" (ngSubmit)="Entrar()">
-        <div *ngIf="loading" class="d-flex justify-content-center">
+
+
+      <div *ngIf="loading" class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
           <div class="loader"></div>
         </div>
-        <div class="input-group box ">
-          <span class="input-group-text icono" id="basic-addon1">
-            <i class="fa-solid fa-user "></i>
-          </span>
-          <div class=" form-floating texto">
-            <input type="text" placeholder="Usuario" formControlName="numero">
+      </div>
+
+
+      <form [formGroup]="form" (ngSubmit)="Entrar()">
+        <div class="input-group mb-3">
+          <div class="input-group">
+            <span class="input-group-text " id="basic-addon1">
+              <i class="fa-solid fa-user" [class.green-icon]="this.form.get('usuario')?.valid"
+                [class.red-icon]="this.form.get('usuario')?.invalid && this.form.get('usuario')?.touched"></i>
+            </span>
+            <div class="form-floating">
+              <input type="text" class="form-control" formControlName="usuario" placeholder=""
+                aria-label="ApellidoPaterno" aria-describedby="basic-addon1">
+              <label for="ApellidoPaterno">Usuario</label>
+            </div>
           </div>
         </div>
 
-        <div class="input-group box ">
-          <span class="input-group-text icono" id="basic-addon1">
-            <i class="fa-solid fa-lock"></i>
+
+
+        <div class="input-group mb-3">
+
+          <span class="input-group-text " id="basic-addon1">
+            <i class="fa-solid fa-lock" [class.green-icon]="this.form.get('psw')?.valid"
+              [class.red-icon]="this.form.get('psw')?.invalid && this.form.get('psw')?.touched"></i>
           </span>
-          <div class=" form-floating">
-            <input type="password" placeholder="Contraseña" formControlName="password">
+          <div class="form-floating">
+            <input type="password" class="form-control" placeholder="" formControlName="psw"
+              aria-label="ApellidoPaterno" aria-describedby="basic-addon1">
+            <label for="">Contraseña</label>
           </div>
         </div>
+
+
+
+
         <label class="mt-3 ms-2  olvide" for="">¿Olvidaste tu contraseña?</label>
         <div class="centro">
           <button type="submit" [disabled]="form.invalid" class="btn text-white btn-upp  mt-3">
-          Entrar</button>
+            Entrar</button>
         </div>
       </form>
     </div>
