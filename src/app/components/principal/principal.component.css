@@ -1,8 +1,17 @@
-.card{
-    margin-top: 90px;
-    border-radius: 30px;
+.Parte1{
     background-color: #BDC7D0;
-    height: 350px; 
-    width: 350px;
+}
+
+input{
+    width: 40%;  
+    box-shadow: 2px 2px 5px #888888; 
+}
+
+.Persona {
     box-shadow: 2px 2px 5px #888888;
+    border-radius: 20px;
+    bottom:10px;
+}
+.card-img-top{
+height: auto;
 }
