@@ -7,7 +7,17 @@ import { Component } from '@angular/core';
 })
 export class NuevoExpedienteComponent {
 
-  
+  cont: any = 1;
+
+  constructor(){}
+
+  ngOnInit(){
+
+  }
+
+  Next(){
+    this.cont = this.cont + 1;
+  }
 
 
 }
