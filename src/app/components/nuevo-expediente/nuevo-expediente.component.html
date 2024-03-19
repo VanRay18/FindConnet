@@ -8,13 +8,13 @@
 
             <!-- progressbar -->
             <ul id="progressbar">
-                <li class="active">Persona Reportante</li>
-                <li>Persona Desaparecida</li>
-                <li>Circunstancias de Desaparición</li>
-                <li>Patrones de comportamiento</li>
-                <li>Información de contacto</li>
-                <li>Transporte</li>
-                <li>Descripción fisica</li>
+                <li class="pointer"(click)="setActiveItem('1')" [ngClass]="{ 'active': cont == 1 }">Persona Reportante</li>
+                <li class="pointer"(click)="setActiveItem('2')" [ngClass]="{ 'active': cont == 2 }">Persona Desaparecida</li>
+                <li class="pointer"(click)="setActiveItem('3')" [ngClass]="{ 'active':cont == 3 }">Circunstancias de Desaparición</li>
+                <li class="pointer"(click)="setActiveItem('4')" [ngClass]="{ 'active': cont == 4  }">Patrones de comportamiento</li>
+                <li class="pointer"(click)="setActiveItem('5')" [ngClass]="{ 'active': cont == 5  }">Información de contacto</li>
+                <li class="pointer"(click)="setActiveItem('6')" [ngClass]="{ 'active': cont == 6  }">Transporte</li>
+                <li class="pointer"(click)="setActiveItem('7')" [ngClass]="{ 'active':cont == 7  }">Descripción fisica</li>
             </ul>
 
             <!-- fieldsets -->
@@ -323,12 +323,13 @@
                 </div>>
                 
             </fieldset>
+            <div class="buttons">
+                <button class="btn" (click)="After()">Anterior</button>
+                <button class="btn" (click)="Next()">Siguiente</button>
+            </div>
         </form>
 
-    <div class="buttons">
-        <button class="btn" (click)="After()">Anterior</button>
-        <button class="btn" (click)="Next()">Siguiente</button>
-    </div>
+
         
 
     </div>

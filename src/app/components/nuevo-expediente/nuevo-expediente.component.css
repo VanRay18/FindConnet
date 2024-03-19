@@ -141,7 +141,9 @@ input {
     -webkit-box-shadow: #f3212138 0px 0px 0px 5px;
     box-shadow: #2195f338 0px 0px 0px 5px;
   }
-
+  .pointer{
+    cursor: pointer;
+}
   .more{
     margin-top: 20px;
     justify-content: center;

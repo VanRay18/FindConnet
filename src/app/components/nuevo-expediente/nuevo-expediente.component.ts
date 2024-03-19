@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nuevo-expediente.component.css']
 })
 export class NuevoExpedienteComponent {
-
+  activeItem: string = 'hola';
   cont: any = 1;
 
   constructor(){}
@@ -14,7 +14,13 @@ export class NuevoExpedienteComponent {
   ngOnInit(){
 
   }
+  setActiveItem(item: string) {
+      
+    this.activeItem = item;
 
+      this.cont = item;
+    
+  }
   Next(){
     if(this.cont >= 1 && this.cont <=8){
       this.cont = this.cont + 1;
