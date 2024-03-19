@@ -13,14 +13,14 @@
     color: #000000;
   }
   .box{
-    margin-top: 25px;
+    margin-top: 10px;
   
   }
   .card{
-    margin-top: 90px;
+    margin-top: 80px;
     border-radius: 30px;
     background-color: #BDC7D0;
-    height: 350px; 
+    height: 400px; 
     width: 350px;
     box-shadow: 2px 2px 5px #888888;
   }
