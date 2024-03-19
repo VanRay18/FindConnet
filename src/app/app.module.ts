@@ -10,6 +10,7 @@ import { PrincipalComponent } from './components/principal/principal.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ExpedientesComponent } from './components/expedientes/expedientes.component';
 import { NavComponent } from './components/nav/nav.component';
+import { NuevoExpedienteComponent } from './components/nuevo-expediente/nuevo-expediente.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavComponent } from './components/nav/nav.component';
     PrincipalComponent,
     FormularioComponent,
     ExpedientesComponent,
-    NavComponent
+    NavComponent,
+    NuevoExpedienteComponent
   ],
   imports: [
     BrowserModule,
