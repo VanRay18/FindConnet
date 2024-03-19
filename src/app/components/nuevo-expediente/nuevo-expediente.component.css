@@ -4,19 +4,34 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-
 }
 
 .register-box {
     margin-top: 50px;
     width: 1000;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.5);
+    background: #bdc7d0;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-
+    color:#000000
 }
 
+input {
+    width: auto;
+    padding: 0px 0;
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    padding-right: 20px;
+  }
+
+::placeholder{
+    color:#030303;
+}
 
 #progressbar {
     display: flex;
@@ -24,7 +39,7 @@ body {
 }
 #progressbar li {
     list-style-type: none;
-    color: white;
+    color: rgb(15, 15, 15);
     text-transform: uppercase;
     font-size: 10px;
     width: 14.29%;
@@ -42,7 +57,7 @@ body {
     line-height: 20px;
     display: block;
     font-size: 9px;
-    color: #333;
+    color: #ffffff;
     background: white;
     border-radius: 5px;
     align-self: center; /* Alineación vertical del cuadro */
@@ -66,7 +81,67 @@ body {
     color:white;
 }
 
+.campo{
+    display: grid;
+    justify-content: center;
+}
 
+.fs-title {
+    font-size: 40px;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: black;
+   }
+   
+   button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+   .buttons{
+    display: flex;
+    justify-content: center;
+   }
 
 
 

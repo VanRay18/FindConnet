@@ -1,4 +1,5 @@
 <body>
+    <router-outlet></router-outlet>
 
     <div class="register-box">
 
@@ -19,35 +20,223 @@
             <!-- fieldsets -->
             <fieldset *ngIf="cont == 1">
                 <h2 class="fs-title">Datos</h2>
-                <h3 class="fs-subtitle">de la persona que reporta</h3>
-                <input type="text" name="nombre" placeholder="Nombre" />
-                <input type="number" name="edad" placeholder="Edad" />
-                <label> Sexo </label>
-                <input type="radio" name="sexo"/>
-                <input type="button" name="next" class="next action-button" value="Next" />
+                <h3 class="fs-subtitle">De La Persona Que Reporta</h3>
+                
+                <div class="campo">
+                    <div>
+                        <input type="text" name="nombre" placeholder="Nombre" />
+                        <input type="text" name="apellidoP" placeholder="Apellido Paterno" />
+                        <input type="text" name="apellidoM" placeholder="Apellido Materno" />
+                    </div>
+    
+                    <div>
+                        <input type="number" name="edad" placeholder="Edad" />
+                        <input type="tel" name="telefono" placeholder="Telefono" />
+                        <input type="email" name="email" placeholder="Correo@example.com" />
+                    </div>
+                    
+                    <div>
+                        <label> Sexo </label>
+                        <div>
+                            <label> Femenino </label>
+                            <input type="radio" name="sexoF"/>
+                            <label> Masculino </label>
+                            <input type="radio" name="sexoM"/>
+                            <label> Otro </label>
+                            <input type="radio" name="sexoO"/>
+    
+                        </div>
+                    </div>
+    
+                    <div>
+                        <input type="text" name="domicilio" placeholder="Domicilio" />
+                        <input type="text" name="ocupacion" placeholder="Ocupacion" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="relacion" placeholder="Relacion con la persona reportada" />
+                    </div>
+                </div>
+                
             </fieldset>
 
             <fieldset  *ngIf="cont == 2">
                 <h2 class="fs-title">Información Personal</h2>
                 <h3 class="fs-subtitle">Persona no localizada o Desaparecida</h3>
-                <input type="text" name="nombre" placeholder="Nombre" />
-                <input type="text" name="alias" placeholder="Alias" />
-                <input type="number" name="edad" placeholder="Edad" />
-                <input type="date" name="fecha-nacimiento" placeholder="Fecha de Nacimiento" />
-                <input type="text" name="lugar-nacimiento" placeholder="Lugar de Nacimiento" />
-                <input type="text" name="curp" placeholder="CURP" />
-                <input type="text" name="genero" placeholder="Identidad de Genero" />
-                <input type="text" name="nacionalidad" placeholder="Nacionalidad" />
-                <input type="text" name="estadoCivil" placeholder="Estado Civil" />
-                <input type="text" name="lugar-nacimiento" placeholder="Lugar de Nacimiento" />
+                
+                <div class="campo">
 
+                    <div>
+                    
+                        <input type="text" name="nombre" placeholder="Nombre" />
+                        <input type="text" name="apellidoP" placeholder="Apellido Paterno" />
+                        <input type="text" name="apellidoM" placeholder="Apellido Materno" />
+                    </div>
+                    
+                    <div>
+                        <input type="text" name="alias" placeholder="Alias" />
+                        <input type="text" name="genero" placeholder="Identidad de Genero" />
+                    </div>
+                    
+                    <div>
+                        <input type="date" name="fecha-nacimiento" placeholder="Fecha de Nacimiento" />
+                        <input type="number" name="edad" placeholder="Edad Años" />
+                        <input type="number" name="edad" placeholder="Edad Meses" />
+                        <input type="number" name="edad" placeholder="Edad Dias" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="nacionalidad" placeholder="Nacionalidad" />
+                        <input type="text" name="lugar-nacimientoE" placeholder="Estado de Nacimiento" />
+                        <input type="text" name="lugar-nacimientoM" placeholder="Municipio de Nacimiento" />
+                        <input type="text" name="lugar-nacimientoL" placeholder="Localidad de Nacimiento" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="curp" placeholder="CURP" />
+                    </div>
+                    
+                    <div>
+                        <input type="text" name="estadoCivil" placeholder="Estado Civil" />
+                        <input type="text" name="trabajo" placeholder="Ocupacion de Trabajo" />
+                        <input type="text" name="trabajo-lugar" placeholder="Lugar de Trabajo" />
+                    </div>
+                    
+                    <div>
+                        <input type="text" name="domicilio" placeholder="Domicilio" />
+                        <input type="text" name="habitantes" placeholder="Personas con las que habita" />
+                        <input type="number" name="hijos" placeholder="Numero de Hijos" />
+                        <input type="text" name="trabajo" placeholder="Los hijos dependen" />
+                    </div>
+    
+                <div>
+                    <input type="text" name="pasatiempo" placeholder="Pasatiempos" />
+                </div>
 
-
+                </div>
+                
             </fieldset>
 
             <fieldset *ngIf="cont == 3">
-                <h2 class="fs-title">Social Profiles</h2>
-                <h3 class="fs-subtitle">Your presence on the social network</h3>
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">Circunstancias de Desaparición</h3>
+                
+                <div class="campo">
+                    <div>
+                        <div>
+                            <label>Fecha de Desaparicion</label>
+                            <input type="date" name="fecha-desaparicion" placeholder="Fecha de Desaparicion" />
+                        </div>
+                        <div>
+                            <label>Fecha de Ultima Vez Que Se Vio</label>
+                            <input type="date" name="fecha-ultima" placeholder="Fecha de Ultima vez que se le vio " />
+                        </div>
+                    </div>
+    
+                    <div>
+                        <label>Fecha de Ultimo Contacto</label>
+                        <input type="date" name="fecha-ultima" placeholder="Ultimo Contacto con la Persona" />
+                        <label>Hora de Ultimo Contacto</label>
+                        <input type="time" name="hora-ultima" placeholder="Ultima Hora con la Persona" />
+                    </div>
+
+                    <div>
+                        <input type="text" name="medio-ultimo" placeholder="Ultimo Medio de Contacto" />
+                        <input type="text" name="persona-ultimo" placeholder="Ultima Persona Que Contacto" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="lugar-dirigido" placeholder="¿A donde se dirigia?" />
+                        <input type="text" name="vestimenta" placeholder="Vestimenta en el momento de la desaparición" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="problemas-fam" placeholder="¿Problemas con familiares?" />
+                        <input type="text" name="sospechas" placeholder="Sospechas sobre alguien" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="enemigos" placeholder="¿Presencia de enemigos?" />
+                    </div>
+                </div>
+                
+            </fieldset>
+
+            <fieldset *ngIf="cont == 4">
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">Patrones de comportamiento</h3>
+                
+                <div class="campo">
+                    <div>
+                        <input type="text" name="falta" placeholder="¿Ha faltado a su casa en otras ocasiones?" />
+                        <input type="text" name="ultimo-lugar" placeholder="Lugar de Ultima Aparición" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="rutina" placeholder="¿Recorrido o rutina diaria?" />
+                        <input type="text" name="lugar-frecuente" placeholder="Lugares frecuentados" />
+                    </div>
+    
+                    <div>
+                        <input type="text" name="actitudes" placeholder="¿Actitud extraña antes de la ausencia?" />
+                        <input type="text" name="vestimenta" placeholder="Comunicaciones previas a la desaparicion" />
+                        <input type="text" name="vestimenta" placeholder="Violencia previas a la desaparicion" />
+                    </div>
+                </div>
+
+                
+            </fieldset>
+
+            <fieldset *ngIf="cont == 5">
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">Información de contacto</h3>
+
+                <div class="campo">
+                    <div>
+                        <input type="tel" name="lugar-dirigido" placeholder="Telefono de la persona reportada" />
+                        <input type="text" name="vestimenta" placeholder="Compañia telefonica" />
+                        <input type="tel" name="lugar-dirigido" placeholder="Telefono de un Familiar" />
+                        <input type="mail" name="email-desaparecido" placeholder="Correo de la Persona Desaparecida " />
+    
+                    </div>
+    
+                    <div>
+                        <label>Redes Sociales de la Persona</label>
+                        <div>
+                            <input type="text" name="lugar-dirigido" placeholder="Instagram" />
+                            <input type="text" name="lugar-dirigido" placeholder="Facebook" />
+                            <input type="text" name="lugar-dirigido" placeholder="Twitter ( X )" />
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset *ngIf="cont == 6">
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">Transporte</h3>
+                
+                <div class="campo">
+
+                    <div>
+                        <label>Medio de Transporte</label>
+                        <div>
+                            <label> Automovil </label>
+                            <input type="radio" name="sexoF"/>
+                            <label> AutoBus </label>
+                            <input type="radio" name="sexoM"/>
+                        </div>
+    
+                        
+                    </div>
+                </div>
+                
+
+            </fieldset>
+
+            <fieldset *ngIf="cont == 7">
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">Descripción fisica</h3>
                 <input type="text" placeholder="Instagram" />
                 <input type="text" placeholder="Github" />
                 <input type="text" placeholder="Twitter" />
@@ -55,8 +244,12 @@
             </fieldset>
 
         </form>
-        <button (click)="After()">Anterior</button>
-        <button (click)="Next()">Siguiente</button>
+
+    <div class="buttons">
+        <button class="btn" (click)="After()">Anterior</button>
+        <button class="btn" (click)="Next()">Siguiente</button>
+    </div>
+        
 
     </div>
 
