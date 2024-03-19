@@ -1,1 +1,53 @@
-<p>nuevo-expediente works!</p>
+<body>
+
+    <div class="register-box">
+
+        <!-- multistep form -->
+        <form id="msform" class="form">
+
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Persona Reportante</li>
+                <li>Persona Desaparecida</li>
+                <li>Circunstancias de Desaparición</li>
+                <li>Patrones de comportamiento</li>
+                <li>Información de contacto</li>
+                <li>Transporte</li>
+                <li>Descripción fisica</li>
+            </ul>
+
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">de la persona que reporta</h3>
+                <input type="text" name="nombre" placeholder="Nombre" />
+                <input type="number" name="edad" placeholder="Edad" />
+                <label> Sexo </label>
+                <input type="radio" name="sexo"/>
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Información Personal</h2>
+                <h3 class="fs-subtitle">Persona no localizada o Desaparecida</h3>
+                <input type="text" name="nombre" placeholder="Nombre" />
+                <input type="text" name="alias" placeholder="Alias" />
+                <input type="number" name="edad" placeholder="Edad" />
+                <input type="date" name="fecha-nacimiento" placeholder="Fecha de Nacimiento" />
+                <input type="text" name="lugar-nacimiento" placeholder="Lugar de Nacimiento" />
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Social Profiles</h2>
+                <h3 class="fs-subtitle">Your presence on the social network</h3>
+                <input type="text" placeholder="Instagram" />
+                <input type="text" placeholder="Github" />
+                <input type="text" placeholder="Twitter" />
+                <input type="button"class="next action-button" value="Submit" />
+            </fieldset>
+
+        </form>
+
+    </div>
+
+  </body>
