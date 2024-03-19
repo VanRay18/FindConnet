@@ -26,7 +26,7 @@
           <li *ngIf="rolDocente" [ngClass]="{ 'active': activeItem === 'Asistencia' }">
             <button (click)="setActiveItem('Asistencia')"data-bs-dismiss="offcanvas" class="ganas">Asistencia</button>
           </li>
-          <li *ngIf="rolDirectivo" [ngClass]="{ 'active': activeItem === 'Horario' }">
+          <li  [ngClass]="{ 'active': activeItem === 'Horario' }">
             <button (click)="setActiveItem('Horario')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-id-card-clip me-2" *ngIf="verificarPantallaPequena()"></i>Reporte</button>
           </li>
           <li *ngIf="rolEstudiante" [ngClass]="{ 'active': activeItem === 'Lista' }">

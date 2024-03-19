@@ -89,12 +89,12 @@ body {
   }
   
   .navbar li.active button {
-  color: #12dde0;
+  color: #ffba00;
     /* color: #12dde0; */
   }
 
   .navbar li.active button::after {
-    background-color: #12dde0;
+    background-color: #ffba00;
     /* background-color: #12dde0; */
   }
   .burger {
