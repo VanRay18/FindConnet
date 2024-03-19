@@ -18,6 +18,7 @@
             </ul>
 
             <!-- fieldsets -->
+
             <fieldset *ngIf="cont == 1">
                 <h2 class="fs-title">Datos</h2>
                 <h3 class="fs-subtitle">De La Persona Que Reporta</h3>
@@ -34,26 +35,25 @@
                         <input type="tel" name="telefono" placeholder="Telefono" />
                         <input type="email" name="email" placeholder="Correo@example.com" />
                     </div>
+
+                    <label class="Radios"> Sexo </label>
+
+                    <fieldset id="switch" class="radio">
+                        <input name="switch" id="on" type="radio">
+                        <label for="on">Masculino</label>
+                        <input name="switch" id="off" type="radio">
+                        <label for="off">Femenino</label>
+                        <input checked="" name="switch" id="auto" type="radio">
+                        <label for="auto">Otro</label>
+                    </fieldset>
                     
-                    <div>
-                        <label> Sexo </label>
-                        <div>
-                            <label> Femenino </label>
-                            <input type="radio" name="sexoF"/>
-                            <label> Masculino </label>
-                            <input type="radio" name="sexoM"/>
-                            <label> Otro </label>
-                            <input type="radio" name="sexoO"/>
     
-                        </div>
-                    </div>
-    
-                    <div>
+                    <div class="more">
                         <input type="text" name="domicilio" placeholder="Domicilio" />
                         <input type="text" name="ocupacion" placeholder="Ocupacion" />
                     </div>
     
-                    <div>
+                    <div class="dato">
                         <input type="text" name="relacion" placeholder="Relacion con la persona reportada" />
                     </div>
                 </div>
@@ -62,54 +62,55 @@
 
             <fieldset  *ngIf="cont == 2">
                 <h2 class="fs-title">Información Personal</h2>
-                <h3 class="fs-subtitle">Persona no localizada o Desaparecida</h3>
+                <h3 class="fs-subtitle">Persona No localizada o Desaparecida</h3>
                 
                 <div class="campo">
-
-                    <div>
-                    
+                    <div class="datos">
                         <input type="text" name="nombre" placeholder="Nombre" />
                         <input type="text" name="apellidoP" placeholder="Apellido Paterno" />
                         <input type="text" name="apellidoM" placeholder="Apellido Materno" />
                     </div>
                     
-                    <div>
+                    <div  class="datos">
                         <input type="text" name="alias" placeholder="Alias" />
                         <input type="text" name="genero" placeholder="Identidad de Genero" />
                     </div>
-                    
-                    <div>
-                        <input type="date" name="fecha-nacimiento" placeholder="Fecha de Nacimiento" />
+
+                    <div class="datos">
+                        <div class="fecha">
+                            <label> Fecha de Nacimiento</label>
+                            <input type="date" name="fecha-nacimiento"/>
+                        </div>
                         <input type="number" name="edad" placeholder="Edad Años" />
                         <input type="number" name="edad" placeholder="Edad Meses" />
                         <input type="number" name="edad" placeholder="Edad Dias" />
                     </div>
     
-                    <div>
+                    <div class="datos">
                         <input type="text" name="nacionalidad" placeholder="Nacionalidad" />
                         <input type="text" name="lugar-nacimientoE" placeholder="Estado de Nacimiento" />
                         <input type="text" name="lugar-nacimientoM" placeholder="Municipio de Nacimiento" />
                         <input type="text" name="lugar-nacimientoL" placeholder="Localidad de Nacimiento" />
                     </div>
     
-                    <div>
+                    <div class="dato">
                         <input type="text" name="curp" placeholder="CURP" />
                     </div>
                     
-                    <div>
+                    <div  class="datos">
                         <input type="text" name="estadoCivil" placeholder="Estado Civil" />
                         <input type="text" name="trabajo" placeholder="Ocupacion de Trabajo" />
                         <input type="text" name="trabajo-lugar" placeholder="Lugar de Trabajo" />
                     </div>
                     
-                    <div>
+                    <div  class="datos">
                         <input type="text" name="domicilio" placeholder="Domicilio" />
                         <input type="text" name="habitantes" placeholder="Personas con las que habita" />
                         <input type="number" name="hijos" placeholder="Numero de Hijos" />
                         <input type="text" name="trabajo" placeholder="Los hijos dependen" />
                     </div>
     
-                <div>
+                <div class="dato">
                     <input type="text" name="pasatiempo" placeholder="Pasatiempos" />
                 </div>
 
@@ -123,39 +124,47 @@
                 
                 <div class="campo">
                     <div>
-                        <div>
-                            <label>Fecha de Desaparicion</label>
-                            <input type="date" name="fecha-desaparicion" placeholder="Fecha de Desaparicion" />
-                        </div>
-                        <div>
-                            <label>Fecha de Ultima Vez Que Se Vio</label>
-                            <input type="date" name="fecha-ultima" placeholder="Fecha de Ultima vez que se le vio " />
-                        </div>
+                        <div class="datos">
+                            <div class="fecha">
+                                <label>Fecha de Desaparicion</label>
+                                <input type="date" name="fecha-desaparicion" placeholder="Fecha de Desaparicion" />
+                            </div>
+
+                            <div class="fecha">
+                                <label>Fecha de Ultima Vez Que Se Vio</label>
+                                <input type="date" name="fecha-ultima" placeholder="Fecha de Ultima vez que se le vio " />
+                            </div>
+                        </div>    
                     </div>
     
-                    <div>
-                        <label>Fecha de Ultimo Contacto</label>
-                        <input type="date" name="fecha-ultima" placeholder="Ultimo Contacto con la Persona" />
-                        <label>Hora de Ultimo Contacto</label>
-                        <input type="time" name="hora-ultima" placeholder="Ultima Hora con la Persona" />
+                    <div class="datos">
+                        <div class="fecha">
+                            <label>Fecha de Ultimo Contacto</label>
+                            <input type="date" name="fecha-ultima" placeholder="Ultimo Contacto con la Persona" />
+                        </div>
+                        <div class="fecha">
+                            <label>Hora de Ultimo Contacto</label>
+                            <input type="time" name="hora-ultima" placeholder="Ultima Hora con la Persona" />
+                        </div>
+                        
                     </div>
 
-                    <div>
+                    <div class="datos">
                         <input type="text" name="medio-ultimo" placeholder="Ultimo Medio de Contacto" />
                         <input type="text" name="persona-ultimo" placeholder="Ultima Persona Que Contacto" />
                     </div>
     
-                    <div>
+                    <div class="datos">
                         <input type="text" name="lugar-dirigido" placeholder="¿A donde se dirigia?" />
                         <input type="text" name="vestimenta" placeholder="Vestimenta en el momento de la desaparición" />
                     </div>
     
-                    <div>
+                    <div class="datos">
                         <input type="text" name="problemas-fam" placeholder="¿Problemas con familiares?" />
                         <input type="text" name="sospechas" placeholder="Sospechas sobre alguien" />
                     </div>
     
-                    <div>
+                    <div class="dato">
                         <input type="text" name="enemigos" placeholder="¿Presencia de enemigos?" />
                     </div>
                 </div>
@@ -167,17 +176,17 @@
                 <h3 class="fs-subtitle">Patrones de comportamiento</h3>
                 
                 <div class="campo">
-                    <div>
+                    <div class="datos">
                         <input type="text" name="falta" placeholder="¿Ha faltado a su casa en otras ocasiones?" />
                         <input type="text" name="ultimo-lugar" placeholder="Lugar de Ultima Aparición" />
                     </div>
     
-                    <div>
+                    <div class="datos">
                         <input type="text" name="rutina" placeholder="¿Recorrido o rutina diaria?" />
                         <input type="text" name="lugar-frecuente" placeholder="Lugares frecuentados" />
                     </div>
     
-                    <div>
+                    <div class="datos">
                         <input type="text" name="actitudes" placeholder="¿Actitud extraña antes de la ausencia?" />
                         <input type="text" name="vestimenta" placeholder="Comunicaciones previas a la desaparicion" />
                         <input type="text" name="vestimenta" placeholder="Violencia previas a la desaparicion" />
@@ -192,7 +201,7 @@
                 <h3 class="fs-subtitle">Información de contacto</h3>
 
                 <div class="campo">
-                    <div>
+                    <div class="datos">
                         <input type="tel" name="lugar-dirigido" placeholder="Telefono de la persona reportada" />
                         <input type="text" name="vestimenta" placeholder="Compañia telefonica" />
                         <input type="tel" name="lugar-dirigido" placeholder="Telefono de un Familiar" />
@@ -200,9 +209,12 @@
     
                     </div>
     
-                    <div>
-                        <label>Redes Sociales de la Persona</label>
-                        <div>
+                    <div class="dato">
+                        <div class="dato">
+                            <label>Redes Sociales de la Persona</label>
+                        </div>
+                        
+                        <div class="datos">
                             <input type="text" name="lugar-dirigido" placeholder="Instagram" />
                             <input type="text" name="lugar-dirigido" placeholder="Facebook" />
                             <input type="text" name="lugar-dirigido" placeholder="Twitter ( X )" />
@@ -218,15 +230,30 @@
                 
                 <div class="campo">
 
-                    <div>
-                        <label>Medio de Transporte</label>
-                        <div>
-                            <label> Automovil </label>
-                            <input type="radio" name="sexoF"/>
-                            <label> AutoBus </label>
-                            <input type="radio" name="sexoM"/>
+                    <div class="dato">
+                        <div class="mores">
+                            <label>Medio de Transporte</label>
                         </div>
-    
+                        
+                        <div class="datos">
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Automovil
+                            </label>
+                        </div>
+
+                        <div class="dato">
+                            <input type="text" name="caracteristicas" placeholder="Caracteristicas" />
+                        </div>
+
+                        <div class="datos">
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Autobus
+                            </label>
+                        </div>
                         
                     </div>
                 </div>
@@ -237,12 +264,65 @@
             <fieldset *ngIf="cont == 7">
                 <h2 class="fs-title">Datos</h2>
                 <h3 class="fs-subtitle">Descripción fisica</h3>
-                <input type="text" placeholder="Instagram" />
-                <input type="text" placeholder="Github" />
-                <input type="text" placeholder="Twitter" />
-                <input type="button"class="next action-button" value="Submit" />
+                <div class="campo">
+
+                    <div class="dato">
+                        <label class="Radios">
+                            Color de piel
+                        </label>
+                        <div class="datos">
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Morena
+                            </label>
+    
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Morena Clara
+                            </label>
+    
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Morena Oscura
+                            </label>
+    
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Blanca
+                            </label>
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Otra
+                                <input type="text" name="otra" placeholder="Escriba" />
+                            </label>
+                        </div>
+                    </div>
+                    
+                    
+                </div>>
+                
             </fieldset>
 
+            <fieldset *ngIf="cont == 8">
+                <h2 class="fs-title">Datos</h2>
+                <h3 class="fs-subtitle">Registrados</h3>
+                <div class="campo">
+
+                    <div class="dato">
+                        <label>¡Registro completo!</label>
+                        
+                        <label>Folio del Expediente:</label>
+                        
+                    </div>
+                    
+                </div>>
+                
+            </fieldset>
         </form>
 
     <div class="buttons">
