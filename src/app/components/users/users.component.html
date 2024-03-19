@@ -1,0 +1,50 @@
+
+<router-outlet></router-outlet>
+<div class="colors">
+    <div class="d-flex justify-content-center ">
+        <h2 class="mx-auto pointer">Localizado</h2>
+        <h2 class="mx-auto pointer">No localizado</h2>
+        <h2 class="mx-auto pointer">Larga data</h2>
+    </div>
+    
+    <div class="espacio"></div>
+    <div class="card m-auto container">
+        <div class="table-responsive" style="max-height: 50em; overflow-y: auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="tabla" (click)="ordenarTabla('numeroExpediente')"><i
+                                class="fa-solid fa-arrow-down-up-across-line me-2"></i>No. Expediente</th>
+                        <th scope="col" class="tabla" (click)="ordenarTabla('nombre')"><i
+                                class="fa-solid fa-arrow-down-up-across-line me-2"></i>Nombre</th>
+                        <th scope="col" class="tabla" (click)="ordenarTabla('apellidoPaterno')"><i
+                                class="fa-solid fa-arrow-down-up-across-line me-2"></i>Apellido Paterno</th>
+                        <th scope="col" class="tabla" (click)="ordenarTabla('apellidoMaterno')"><i
+                                class="fa-solid fa-arrow-down-up-across-line me-2"></i>Apellido Materno</th>
+                        <th scope="col" class="tabla" (click)="ordenarTabla('nombreEmisor')"><i
+                                class="fa-solid fa-arrow-down-up-across-line me-2"></i>Emisor</th>
+                        <th scope="col" class="tabla" (click)="ordenarTabla('fecha')"><i
+                                class="fa-solid fa-arrow-down-up-across-line me-2"></i>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- | filtroBusqueda: terminoBusqueda -->
+                    <tr *ngFor="let horarios of listarHorario ">
+                        <td>{{ horarios.numeroExpediente }}</td>
+                        <td>{{ horarios.nombre }}</td>
+                        <td>{{ horarios.apellidoPaterno}}</td>
+                        <td>{{ horarios.apellidoMaterno}}</td>
+                        <td>{{ horarios.nombreEmisor }}</td>
+                        <td>{{ horarios.fecha }}</td>
+                        <!-- <td>
+                        <label *ngIf="!horarios.validacion" class="registro" for=""><i
+                                class="fa-solid fa-circle me-1 circulo"></i>Registrado</label>
+                        <button type="button" (click)="pase(horarios)" *ngIf="horarios.validacion"
+                            class="btn btn-outline-success">Asistencia</button>
+                    </td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -41,7 +41,7 @@ export class NavComponent {
         this.nombre = (name);
       }); 
       this.authService.usuario$.subscribe(check => {
-        this.activeItem = 'Buscar';
+        this.activeItem = 'Inicio';
         this.ROL = (check);
       }); 
       this.verificarPantallaPequena();
@@ -50,14 +50,15 @@ export class NavComponent {
     setActiveItem(item: string) {
       
       this.activeItem = item;
-      if(this.activeItem === 'Buscar'){
+      if(this.activeItem === 'Inicio'){
         this.router.navigate(['Principal']);
       }
-      if(this.activeItem === 'Lista'){
-        this.router.navigate(['PrincipalAlumno/'+ this.id]);
+ 
+      if(this.activeItem === 'Usuarios'){
+        this.router.navigate(['users']);
       }
-      if(this.activeItem === 'Contraseña'){
-        this.router.navigate(['Menudirectivo/'+ this.id]);
+      if(this.activeItem === 'new'){
+        this.router.navigate(['forms']);
       }
       if(this.activeItem === 'Pase'){
         this.router.navigate(['kuko/'+ this.id]);
@@ -79,7 +80,7 @@ export class NavComponent {
       const toastrOptions = {
         preventDuplicates: true,
         progressBar: true,
-        timeOut: 4500,
+        timeOut: 1500,
       };
       this.toastr.success('Cierre de sesión correcto', 'Hasta luego', toastrOptions as any);
     }
