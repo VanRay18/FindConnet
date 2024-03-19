@@ -58,7 +58,7 @@ export class NavComponent {
         this.router.navigate(['users']);
       }
       if(this.activeItem === 'new'){
-        this.router.navigate(['formulario']);
+        this.router.navigate(['forms']);
       }
       if(this.activeItem === 'Pase'){
         this.router.navigate(['kuko/'+ this.id]);

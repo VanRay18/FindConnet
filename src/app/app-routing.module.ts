@@ -11,7 +11,7 @@ const routes: Routes = [
 
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
   {path: 'inicio', component: InicioComponent},
-  {path: 'formulario', component: FormularioComponent},
+  {path: 'forms', component: FormularioComponent},
   {path: 'nuevo', component: NuevoExpedienteComponent},
   {path: 'users', component: UsersComponent},
   {path: 'Principal', component: PrincipalComponent},

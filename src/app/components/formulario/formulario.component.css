@@ -7,7 +7,7 @@ body {
     background-color: #F6F6F6;
 }
 
-#tituloFormulario {
+.tituloFormulario {
     font-size: 42px;
     font-family: Arial, sans-serif;
     text-align: center; /* Centrar horizontalmente */
@@ -26,7 +26,7 @@ form {
 }
 .fila {
     display: flex;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 #nombre {
     width: 200px;
@@ -41,7 +41,7 @@ form {
     width: 200px;
 }
 
-input[type="submit"] {
+.upp {
     background-color: #840921;
     color: white;
     padding: 12px 20px;
@@ -52,6 +52,6 @@ input[type="submit"] {
     margin-top: 20;
 }
 
-input[type="submit"]:hover {
+.upp:hover {
     background-color: #570818;
 }
