@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #F6F6F6;
+}
+
+#tituloFormulario {
+    font-size: 42px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centrar horizontalmente */
+    margin-bottom: 20px; /* Añadir espacio inferior */
+    margin-top: 0; /* Eliminar margen superior predeterminado */
+    padding-top: 20px; /* Añadir espacio superior */
+}
+
+
+form {
+    width: 800px;
+    padding: 40px;
+    background-color: #dfe2e5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.fila {
+    display: flex;
+    margin-bottom: 20px;
+}
+#nombre {
+    width: 200px;
+    margin-right: 60px;
+}
+#apellidoP {
+    width: 200px;
+    margin-right: 60px;
+}
+
+#apellidoM {
+    width: 200px;
+}
+
+input[type="submit"] {
+    background-color: #840921;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20;
+}
+
+input[type="submit"]:hover {
+    background-color: #570818;
+}
