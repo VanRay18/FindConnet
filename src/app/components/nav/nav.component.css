@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+  
+  
+  }
+  .color{
+    background-color: #38040E;
+  }
+  .navbar {
+    background-color: #38040E;
+
+  
+  }
+  .icon{
+    font-size: 20px;
+  }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .letra{
+    font-size: 20px;
+  color: #ffff;
+  
+  }
+  .user{
+    font-size: 28px;
+    color: #ffff;
+  }
+  .cierre{
+    color: #ffff;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .nombreNav{
+    
+      font-size: 18px;
+    color: #ffff;
+    
+
+  }
+  .navbar li {
+    margin-left: 10px; /* Añade un pequeño espacio entre los elementos */
+  }
+  .izquierda{
+    margin-left: 20px; 
+    margin-right: 10px; 
+  }
+  .navbar button{
+    
+    position: relative;
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #38040E;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .navbar button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s;
+  }
+  .upp{
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  .navbar button:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+  .navbar button:hover::after {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .navbar li.active button {
+  color: #12dde0;
+    /* color: #12dde0; */
+  }
+
+  .navbar li.active button::after {
+    background-color: #12dde0;
+    /* background-color: #12dde0; */
+  }
+  .burger {
+    font-size: 1.5rem;  /* Ajusta el tamaño del icono según tus necesidades */
+    transform: scale(1.7);  /* Ajusta el factor de escala según tus necesidades */
+    /* Otras propiedades de estilo que desees agregar */
+}
+  .burger:hover{
+    color: #a5a5a5;
+  }
+  .escudo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50px;
+    height: 52px;
+  }
+  .imagen{
+    width: 50px;
+    height: 48px;
+  }
+  .spacer {
+    margin-right: 40px; /* Ajusta el margen derecho según tus necesidades */
+  }

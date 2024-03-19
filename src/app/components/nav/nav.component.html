@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex">
+        <img src="./assets/Escudo2.png" class="escudo ms-3">
+      </div>
+      <button class="navbar-toggler"*ngIf="(verificarPantallaPequena() && (rolDirectivo || rolRectoria || rolEstudiante || rolDocente || rolPrefecto || rolRectoria))" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar">
+        <i class="fa-solid fa-bars burger"></i>
+      </button>
+   
+      <div class="offcanvas offcanvas-start color" tabindex="-2" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel" style="width: 76%;">
+        <div class="offcanvas-header">
+          <div
+            *ngIf="verificarPantallaPequena() && rolDirectivo || rolRectoria || rolEstudiante || rolDocente|| rolPrefecto|| rolRectoria">
+           
+            <label class="nombreNav ms-2"> <i class="fa-solid fa-circle-user user me-2"></i>{{nombre}}</label>
+          </div>
+          <i class="fa-solid fa-arrow-left cierre " data-bs-dismiss="offcanvas"></i>
+          <!-- <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+        </div>
+  
+  
+        <ul class="navbar-nav">
+  
+          <li *ngIf="rolDocente" [ngClass]="{ 'active': activeItem === 'Asistencia' }">
+            <button (click)="setActiveItem('Asistencia')"data-bs-dismiss="offcanvas" class="ganas">Asistencia</button>
+          </li>
+          <li *ngIf="rolDirectivo" [ngClass]="{ 'active': activeItem === 'Horario' }">
+            <button (click)="setActiveItem('Horario')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-id-card-clip me-2" *ngIf="verificarPantallaPequena()"></i>Reporte</button>
+          </li>
+          <li *ngIf="rolEstudiante" [ngClass]="{ 'active': activeItem === 'Lista' }">
+            <button (click)="setActiveItem('Lista')" data-bs-dismiss="offcanvas">Lista</button>
+          </li>
+          <li *ngIf="rolPrefecto" [ngClass]="{ 'active': activeItem === 'Pase' }">
+            <button (click)="setActiveItem('Pase')" data-bs-dismiss="offcanvas"><i class="fa-regular fa-address-book con me-2" *ngIf="verificarPantallaPequena()"></i>Lista</button>
+          </li>
+          <li *ngIf="rolRectoria" [ngClass]="{ 'active': activeItem === 'Carreras' }">
+            <button (click)="setActiveItem('Carreras')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-school icon me-2" *ngIf="verificarPantallaPequena()"></i>Carreras</button>
+          </li>
+          <!-- <li *ngIf="rolEstudiante || rolDirectivo || rolDocente" [ngClass]="{ 'active': activeItem === 'Contraseña' }">
+            <button (click)="setActiveItem('Contraseña')">Contraseña</button>
+          </li> -->
+          <li *ngIf="rolDirectivo || rolRectoria " [ngClass]="{ 'active': activeItem === 'Alumnos' }">
+            <button (click)="setActiveItem('Alumnos')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-graduation-cap icon me-2" *ngIf="verificarPantallaPequena()"></i>Alumnos</button>
+          </li>
+          
+          <li *ngIf="rolDirectivo || rolRectoria" [ngClass]="{ 'active': activeItem === 'Docentes' }">
+            <button (click)="setActiveItem('Docentes')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-chalkboard-user icon me-2" *ngIf="verificarPantallaPequena()"></i>Docentes</button>
+          </li>
+          <li  *ngIf="rolRectoria" [ngClass]="{ 'active': activeItem === 'Directivos' }">
+            <button (click)="setActiveItem('Directivos')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-user-tie icon me-2" *ngIf="verificarPantallaPequena()"></i>Directivos</button>
+          </li>
+          <li *ngIf="rolDirectivo || rolRectoria" [ngClass]="{ 'active': activeItem === 'Exel' }">
+            <button (click)="setActiveItem('Exel')" data-bs-dismiss="offcanvas"><i class="fa-solid fa-file-import icon me-2" *ngIf="verificarPantallaPequena()"></i>Carga de documentos</button>
+          </li>
+          <li
+          *ngIf="(verificarPantallaPequena() && (rolDirectivo || rolRectoria || rolEstudiante || rolDocente || rolPrefecto || rolRectoria))">
+            <button (click)="salir()" data-bs-dismiss="offcanvas"><i class="fa-solid fa-arrow-right-from-bracket  icon me-2 "></i>Salir</button>
+          </li>
+  
+        </ul>
+      </div>
+      <div class=" upp mt-1">
+        <input
+        *ngIf="(!verificarPantallaPequena() && (rolDirectivo || rolRectoria || rolEstudiante || rolDocente || rolPrefecto || rolRectoria))"
+          (click)="salir()" type="button" class="btn btn-outline-light" value="Salir">
+        <label
+        *ngIf="(!verificarPantallaPequena() && (rolDirectivo || rolRectoria || rolEstudiante || rolDocente || rolPrefecto || rolRectoria))"
+          class="letra mx-3">{{nombre}}</label>
+      </div>
+    </div>
+  </nav>
+  
