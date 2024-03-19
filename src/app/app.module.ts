@@ -11,6 +11,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { ExpedientesComponent } from './components/expedientes/expedientes.component';
 import { NavComponent } from './components/nav/nav.component';
 import { NuevoExpedienteComponent } from './components/nuevo-expediente/nuevo-expediente.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { NuevoExpedienteComponent } from './components/nuevo-expediente/nuevo-ex
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],
