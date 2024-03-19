@@ -1,1 +1,42 @@
-<p>formulario works!</p>
+<body>
+    
+
+    <div class="columna">
+        <p id="tituloFormulario">Registro de Nueva Ficha de Busqueda</p>
+        <form action="/submit-formulario" method="post">
+            
+            <div class="fila">
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="nombre" formControlName="Nombre" required
+                        placeholder="Nombre" aria-label="Nombre"
+                        aria-describedby="basic-addon1">
+                    <label for="">Nombre</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="apellidoP" formControlName="Apellido Paterno" required
+                        placeholder="Apellido Paterno" aria-label="Apellido Paterno"
+                        aria-describedby="basic-addon1">
+                    <label for="">Apellido Paterno</label>
+                </div>
+    
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="apellidoM" formControlName="Apellido Materno" required
+                        placeholder="Apellido Materno" aria-label="Apellido Materno"
+                        aria-describedby="basic-addon1">
+                    <label for="">Apellido Materno</label>
+                </div>
+                
+            </div>
+            
+            <input type="submit" value="Revisar Busqueda">
+
+        </form>
+
+
+    </div>
+
+    
+    
+    </body>
