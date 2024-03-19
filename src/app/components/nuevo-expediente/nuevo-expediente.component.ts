@@ -16,8 +16,16 @@ export class NuevoExpedienteComponent {
   }
 
   Next(){
-    this.cont = this.cont + 1;
-  }
+    if(this.cont >= 1 && this.cont <=8){
+      this.cont = this.cont + 1;
+    }
 
+  }
+  After(){
+    if(this.cont >= 2 && this.cont <=8){
+      this.cont = this.cont - 1;
+    }
+
+  }
 
 }

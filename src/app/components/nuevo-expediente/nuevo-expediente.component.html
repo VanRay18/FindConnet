@@ -17,7 +17,7 @@
             </ul>
 
             <!-- fieldsets -->
-            <fieldset>
+            <fieldset *ngIf="cont == 1">
                 <h2 class="fs-title">Datos</h2>
                 <h3 class="fs-subtitle">de la persona que reporta</h3>
                 <input type="text" name="nombre" placeholder="Nombre" />
@@ -27,7 +27,7 @@
                 <input type="button" name="next" class="next action-button" value="Next" />
             </fieldset>
 
-            <fieldset>
+            <fieldset  *ngIf="cont == 2">
                 <h2 class="fs-title">Información Personal</h2>
                 <h3 class="fs-subtitle">Persona no localizada o Desaparecida</h3>
                 <input type="text" name="nombre" placeholder="Nombre" />
@@ -45,7 +45,7 @@
 
             </fieldset>
 
-            <fieldset>
+            <fieldset *ngIf="cont == 3">
                 <h2 class="fs-title">Social Profiles</h2>
                 <h3 class="fs-subtitle">Your presence on the social network</h3>
                 <input type="text" placeholder="Instagram" />
@@ -55,6 +55,8 @@
             </fieldset>
 
         </form>
+        <button (click)="After()">Anterior</button>
+        <button (click)="Next()">Siguiente</button>
 
     </div>
 
