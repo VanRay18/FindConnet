@@ -13,6 +13,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { NuevoExpedienteComponent } from './components/nuevo-expediente/nuevo-expediente.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToastrModule } from 'ngx-toastr';
     FormularioComponent,
     ExpedientesComponent,
     NavComponent,
-    NuevoExpedienteComponent
+    NuevoExpedienteComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+.pointer{
+    cursor: pointer;
+}
+
+
+.espacio{
+    margin-top: 40px;
+}
+.tabla {
+    cursor: pointer;
+  }
+  
+  .tabla:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #a00b29;
+  }
+
+  .colors{
+    background: #dadada;
+    min-height: 100vh; 
+  }
